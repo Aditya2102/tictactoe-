@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;/*box-sizing property allows us to include the padding and border in an element's total width and height.*/
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    color: #545454; /*body txt color*/
+    display: flex;/*makes the application flexed in center*/
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;/* center*/
+}
+
+.container
+{
+    background: #14BDAC;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 28px;
+}
+.title span/* TAC in white */
+{
+    color: blanchedalmond;
+}
+.statusaction span
+{
+    color: blanchedalmond;
+    height: 30px;
+}
+.statusaction
+{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.reset  
+{/* to make reset act as a button */
+    cursor: pointer;
+}
+.reset:hover
+{/* to change the color when you hiver over it */
+    color: blanchedalmond;
+
+}
+.grid
+{
+    background-color: #158376;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);/*1fr makes 3 column and 3 rows equally distributed in center*/
+    grid-gap: 5px;
+    
+}
+.cell
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
+    background-color: #14BDAC;
+}
+.x::after
+{
+    cursor: default;/* makes the cusor back to normal*/
+    content: '×';
+    font-size: 75px;
+    font-family: monospace,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.o::after
+{
+    cursor: default;
+    content: '○';
+    font-size: 75px;
+    color: blanchedalmond;
+    font-family: monospace,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.won::after
+{
+    color: crimson;
+}
